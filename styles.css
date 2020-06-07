@@ -1,0 +1,355 @@
+/* CSS Imports
+------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* CSS Variables
+------------------------------------------------- */
+:root {
+  --primary-color: #2b6477;
+  --secondary-color: #a3c6d2;
+  --dark-color: #222;
+  --light-color: #fff;
+  --page-size: 1100px;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+/* CSS Reset
+------------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-montserrat);
+  line-height: 1.4;
+  font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.1rem;
+}
+
+p {
+  margin: 1.1rem 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility Classes
+------------------------------------------------- */
+/* Utility - Container */
+.container {
+  max-width: var(--page-size);
+  margin: 0 auto;
+  padding: 1.2rem;
+  overflow: auto;
+}
+
+/* Utility - Headings */
+.heading-l {
+  font-size: 4.5rem;
+}
+
+.heading-m {
+  font-size: 2.5rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+}
+
+/* Utility - Texts */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* Utility - Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.7rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 2rem;
+  color: var(--light-color);
+  background: var(--primary-color);
+}
+
+.btn:hover {
+  color: var(--primary-color);
+  background-color: var(--light-color);
+}
+
+.btn-primary {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+.btn-dark {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+.btn-dark:hover {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.btn-transform {
+  text-transform: uppercase;
+}
+
+/* Header Section
+------------------------------------------------- */
+/* Header */
+.h-content {
+  background: url('img/hero.jpg') no-repeat center center/cover;
+  height: 100vh;
+}
+
+/* Header Overlay */
+.h-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.h-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; /* !Note to self, overlay only worked after adding z-index -1 */
+  background-color: rgba(50, 50, 70, 0.4);
+}
+
+/*------------------------------------------------- */
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: none;
+  color: var(--light-color);
+}
+
+#navbar .logo {
+  font-size: 1.5rem;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+#navbar ul li a {
+  padding: 1.2rem;
+  color: var(--light-color);
+}
+
+#navbar ul li a:hover,
+#navbar .current {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+/*------------------------------------------------- */
+/* Hero */
+#hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  color: var(--light-color);
+}
+
+#hero .hero-content h1 {
+  font-weight: 100;
+}
+
+#hero .hero-content .btn-dark {
+  font-weight: 600;
+  font-size: 0.8rem;
+  width: 13rem;
+}
+
+#hero .hero-content .btn-dark:hover {
+  background-color: #000;
+  color: var(--light-color);
+}
+
+/* Features Section
+------------------------------------------------- */
+/* Sub Features */
+#features .features-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#features .features-sub .features-content {
+  max-width: 50%;
+  padding: 1.5rem;
+}
+
+#features .features-sub .features-images {
+  display: inline-block;
+}
+
+#features .features-sub .features-images img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Testimonials Section
+------------------------------------------------- */
+/* Testimonial */
+#feedback {
+  background: url('img/testimonials-bg.jpg');
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#feedback::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(250, 250, 250, 0.85);
+}
+
+/*------------------------------------------------- */
+/* Comments */
+#feedback .comments {
+  display: flex;
+  align-items: flex-start;
+  margin: 3rem 2rem;
+  padding: 0 3rem;
+}
+
+#feedback h1 {
+  margin: 2rem;
+}
+
+#feedback .comments .comments-content {
+  align-items: start;
+  padding: 0 2rem;
+}
+
+#feedback .comments .comments-content:nth-child(odd) {
+  text-align: right;
+  padding: 0 2rem;
+}
+
+#feedback .comments .comments-image {
+  width: 400px;
+}
+
+#feedback .comments .comments-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Tickets Section
+------------------------------------------------- */
+/* Tickets */
+#tickets {
+  padding: 80px 0;
+}
+
+#tickets h2 {
+  margin-bottom: 40px;
+}
+
+#tickets .ticket-holder {
+  display: flex;
+  align-items: start;
+  text-align: center;
+}
+
+#tickets .ticket-holder .card {
+  margin: 40px 20px;
+  width: 100%;
+  border: none;
+}
+
+#tickets .ticket-holder .card .card-title {
+  background: var(--secondary-color);
+  padding: 10px 20px;
+}
+
+#tickets .ticket-holder .card .card-title p.title,
+#tickets .ticket-holder .card .card-title p.price {
+  display: block;
+  color: var(--light-color);
+}
+
+#tickets .ticket-holder .card .card-body {
+  padding: 2rem 1rem;
+  background-color: #d7d6d7;
+}
+
+#tickets .ticket-holder .card .card-body ul li {
+  padding: 5px;
+  border-bottom: 1px dotted #ccc;
+  border-width: 80%;
+}
+
+#tickets .ticket-holder .card .card-body ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+/* Footer Section
+------------------------------------------------- */
+/* h5 */
+Footer h4 {
+  padding: 2rem 0;
+  margin-bottom: 0;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
