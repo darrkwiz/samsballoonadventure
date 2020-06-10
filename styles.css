@@ -353,3 +353,42 @@ Footer h4 {
   color: var(--light-color);
   background-color: var(--primary-color);
 }
+
+
+
+/* 
+===========================================================================
+About Page
+=========================================================================== */
+
+/* Header Section
+------------------------------------------------- */
+/* Header */
+header.short-header {
+  height: 80px;
+  background: url('img/hero.jpg') no-repeat center top/cover;
+}
+
+
+/* Section: Who We Are
+------------------------------------------------- */
+#who > div {
+  display: flex;
+  padding: 2.5rem 1rem;
+}
+
+#who .who-img {
+  width: 100%;
+  margin: auto 0;
+  display: inline-block;
+}
+
+#who .who-img img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(50, 50, 70, 0.4);
+}
+
+#who .who-content {
+  padding: 2rem;
+}
