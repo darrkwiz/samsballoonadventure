@@ -392,3 +392,54 @@ header.short-header {
 #who .who-content {
   padding: 2rem;
 }
+
+
+/* Section: Founders
+------------------------------------------------- */
+#founders {
+  padding: 4rem;
+  width: 100%;
+  background: url('./img/founder-overaly.JPG') no-repeat center center/cover;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#founders::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; /* !Note to self, overlay only worked after adding z-index -1 */
+  background-color: rgba(150, 250, 170, 0.4);
+}
+
+#founders h2 {
+  text-align: center;
+}
+
+#founders .founder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+#founders .founder .founder-img {
+  margin: auto 10px;
+  display: inline-block;
+}
+
+#founders .founder img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+#founders .founder .bio {
+  padding: 1.5rem;
+}
