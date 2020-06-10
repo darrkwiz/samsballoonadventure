@@ -421,6 +421,7 @@ header.short-header {
 
 #founders h2 {
   text-align: center;
+  margin: 2rem 0;
 }
 
 #founders .founder {
@@ -438,8 +439,13 @@ header.short-header {
 #founders .founder img {
   width: 200px;
   border-radius: 50%;
+  box-shadow: 5px 5px 20px rgba(50, 50, 70, 0.4);
 }
 
 #founders .founder .bio {
   padding: 1.5rem;
 }
+
+
+/* Section: We Are Green Initiative
+------------------------------------------------- */
