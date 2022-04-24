@@ -449,3 +449,15 @@ header.short-header {
 
 /* Section: We Are Green Initiative
 ------------------------------------------------- */
+
+
+.boxes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.boxes img {
+  width: 50px;
+}
